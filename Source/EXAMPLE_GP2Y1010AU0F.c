@@ -6,10 +6,6 @@
      Create Date	: 2017/12/31
 ---------------------------------------------------------------------- */
 
-
-#ifndef __GP2Y1010AU0F_EXAMPLE__
-#define __GP2Y1010AU0F_EXAMPLE__
-
 #include <mega32a.h>
 #include <stdio.h>
 #include <delay.h>
@@ -25,16 +21,16 @@ void EXAMPLE_GP2Y1010AU0F(void);
 
 void EXAMPLE_GP2Y1010AU0F(void)
 {
-		FLOAT read_voltage=0, read_dust_data=0.0;
-		FLOAT get_raw_data=0.0,get_dust_data=0.0;
-		FLOAT real_dust_data=0.0,total_data=0.0;
-		FLOAT turn_mg_to_ug = 0;
-		INT32U data[5]={0};         
-		INT32U print_data[5]={0};      
-		CHAR8U lcd_data[7]={0};		
+	FLOAT read_voltage=0, read_dust_data=0.0;
+	FLOAT get_raw_data=0.0,get_dust_data=0.0;
+	FLOAT real_dust_data=0.0,total_data=0.0;
+	FLOAT turn_mg_to_ug = 0;
+	INT32U data[5]={0};         
+	INT32U print_data[5]={0};      
+	CHAR8U lcd_data[7]={0};		
 		
-		FLOAT temp_data[GP2Y1010AU0F_READ_BUFFER]={0.0};
-		INT32U cnt=0; 
+	FLOAT temp_data[GP2Y1010AU0F_READ_BUFFER]={0.0};
+	INT32U cnt=0; 
 	
 		/* initial trigger GP2Y1010AU0F LED IO */
    	   	GP2Y1010AU0F_SET_INITAIL();  
@@ -125,10 +121,8 @@ void EXAMPLE_GP2Y1010AU0F(void)
 
 			/* delay 150ms */
 			delay_ms(150);
-
-
 		}
 
-               printf("--------------------  GP2Y1010AU0F_READ_BUFFER dust sensor (PM2.5) --------------------\r\n");
+		printf("--------------------  GP2Y1010AU0F_READ_BUFFER dust sensor (PM2.5) --------------------\r\n");
 }
-#endif		//#ifndef __GP2Y1010AU0F_EXAMPLE__
+
